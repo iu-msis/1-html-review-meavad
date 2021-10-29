@@ -59,15 +59,3 @@ Vue.createApp(SomeApp).mount('#someApp');
 //    this.offers = json;
 //    this.offerForm={};
 // })
-
-selectOffertoEdit(o) {
-    this.selectedOffer = o;
-    this.offerForm = this.selectedOffer;
-},
-resetOfferForm() {
-    this.selectedOffer = null;
-    this.offerForm = {};
-}
-postEditOffer(evt) {
-    this.student
-}

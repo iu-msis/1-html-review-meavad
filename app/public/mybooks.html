@@ -61,6 +61,15 @@
           <td> {{ book.Publisher }}</td>
           <td>{{ book.page_count }}</td>
           <td>{{ book.MSRP }}</td>
+          <td> 
+          </td>
+          <td>
+            <button type="button" 
+              class="btn btn-outline-secondary btn-sm"
+              v-on:click="selectBookToEdit(book)">Edit</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm"
+              v-on:click="postDeleteBook(book)">Delete</button>
+          </td>
         </tr>
       </tbody>
       <tfoot>
@@ -74,7 +83,7 @@
      </table>
    
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-      <form v-on:submit.prevent="postNewBook" method="post">
+      <form v-on:submit.prevent="postBook" method="post">
         <label for="Title"> Title: </label> 
         <input type="text" v-model="bookForm.Title" 
         class="form-control" id="title" >        
@@ -97,16 +106,13 @@
         class="form-control" id="msrp">
         
        
-        <p> Additional Details </p>
-        <p> <textarea name="notes" id="notes"> </textarea> </p>
-         <input type="submit" name="submit" id="submit" value="Submit" class="button">      
+      
+        <button type="submit" class="btn btn-primary">{{ selectedBook === null ? "Add " : "Edit " }} Book </button>
+        <button type="button" class="btn btn-outline-secondary" v-if="selectedBook" v-on:click="resetBookForm">Cancel</button>      
     </div>
+    
   </form>
   </div>
-
-
-
-
 
   </body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
