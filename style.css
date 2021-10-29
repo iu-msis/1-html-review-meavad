@@ -1,0 +1,114 @@
+thead {
+  background-color:purple;
+  color: white;
+}
+
+tfoot{
+  background-color: black;
+  color: white;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header {
+  background-color: purple;
+  color: white;
+  padding: 10px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+nav {
+  background-color: #eeeeee;
+  padding: 10px;
+}
+
+.nav_links {
+  color: purple;
+  background-color: #eeeeee;
+  text-decoration: none;
+  border: 1px solid purple;
+  padding: 5px;
+}
+
+.nav_links:hover {
+  color: #eeeeee;
+  background-color: purple;
+  border: 1px solid #eeeeee;
+}
+
+main {
+  padding: 10px;
+}
+
+footer {
+  background-color: #999999;
+  padding: 10px;
+}
+
+form {
+  background-color: whitesmoke;
+  padding: 20px;
+}
+
+input,select,textarea{
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 30%;
+  height: 100px;
+}
+
+.button {
+ background-color: white;
+ color: purple;
+ border: 2px solid purple;
+ padding: 6px;
+}
+
+.button:hover{
+  background-color: purple;
+  color:white;
+}
+
+.override {
+font-style: italic;
+font-size: 14px;
+color: firebrick;
+}
+
+th[role=columnheader]:not(.no-sort) {
+	cursor: pointer;
+}
+
+th[role=columnheader]:not(.no-sort):after {
+	content: '';
+	float: right;
+	margin-top: 7px;
+	border-width: 0 4px 4px;
+	border-style: solid;
+	border-color: white;
+	opacity: 0.5;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+th[aria-sort=ascending]:not(.no-sort):after {
+	border-bottom: none;
+	border-width: 4px 4px 0;
+}
+
+th[aria-sort]:not(.no-sort):after {
+	visibility: visible;
+	opacity: 0.4;
+}
+
+th[role=columnheader]:not(.no-sort):hover:after {
+	visibility: visible;
+	opacity: 1;
+}

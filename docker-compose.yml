@@ -6,6 +6,12 @@ services:
       - "8080:80"
     volumes:
       - ./app/public:/srv/app/public
+
     env_file:
       - ./docker/env
+<<<<<<< HEAD
       
+=======
+=======
+
+>>>>>>> d9cbd689827d8c39f4176da0bcb0c6470a9f29c0
